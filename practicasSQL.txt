@@ -1,0 +1,24 @@
+CREATE TABLE producto (
+  codigo_producto VARCHAR(15) NOT NULL,
+  nombre VARCHAR(70) NOT NULL,
+  gama VARCHAR(50) NOT NULL,
+  dimensiones VARCHAR(25) NULL,
+  proveedor VARCHAR(50) DEFAULT NULL,
+  descripcion text NULL,
+  cantidad_en_stock SMALLINT NOT NULL,
+  precio_venta NUMERIC(15,2) NOT NULL,
+  precio_proveedor NUMERIC(15,2) DEFAULT NULL,
+  PRIMARY KEY (codigo_producto),
+  FOREIGN KEY (gama) REFERENCES gama_producto (gama)
+);
+
+
+INSERT INTO fabricante VALUES(1, 'Asus');
+INSERT INTO fabricante VALUES(2, 'Lenovo');
+INSERT INTO fabricante VALUES(3, 'Hewlett-Packard');
+INSERT INTO fabricante VALUES(4, 'Samsung');
+INSERT INTO fabricante VALUES(5, 'Seagate');
+INSERT INTO fabricante VALUES(6, 'Crucial');
+INSERT INTO fabricante VALUES(7, 'Gigabyte');
+INSERT INTO fabricante VALUES(8, 'Huawei');
+INSERT INTO fabricante VALUES(9, 'Xiaomi');
